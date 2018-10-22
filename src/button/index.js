@@ -21,14 +21,14 @@ Component({
             this._updateStyle()
         },
         _updateStyle() {
-            var color = this.data.color || env.button.textColor || '#343434'
-            var style = `color:${color};`
+            var style = ''
             if (this.data.theme === 'fill') {
                 var fillColor = this.data.color || env.button.fillColor || env.theme
-                style = `${style}background-color:${fillColor};`
+                style = `background-color:${fillColor};`
             } else if (this.data.theme === 'line') {
                 var lineColor = this.data.color || env.button.lineColor || "#dbdbdb"
-                style = `${style}border: 1px solid ${lineColor};`
+                var color = this.data.color || env.button.textColor || '#343434'
+                style = `color:${color};border: 1px solid ${lineColor};`
             }
             this.setData({ style })
         },
