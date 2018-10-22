@@ -1,0 +1,4 @@
+<popup id="modal" ctheight="320px" ctoffset="-320px" position='bottom'>
+    <view>test1</view>
+    <view>test2</view>
+</popup>

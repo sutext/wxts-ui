@@ -1,0 +1,11 @@
+<view class="wrapper" style="background-color:{{color}};">
+    <view class="box {{disabled ? 'box-center' : ''}}">
+        <view class="side">
+            <icon type="search" size="14" />
+            <input class="input" confirm-type="search" type="text" placeholder="{{placeholder}}" value="{{value}}"
+                bindinput="_inputTyping" disabled="{{disabled}}" focus="{{focus}}" />
+        </view>
+        <icon wx:if="{{showClear}}" type="clear" size="14" catch:tap="_clearInput" />
+    </view>
+    <view wx:if="{{cancel}}" class="cancel" catch:tap="_onCancel">取消</view>
+</view>

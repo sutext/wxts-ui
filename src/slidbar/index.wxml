@@ -1,0 +1,10 @@
+<movable-area id="container" class="container">
+    <movable-view direction="horizontal" style="width:{{width+80}}px;" class="movable-view" damping="20" x="{{x}}"
+        inertia bindtouchend="onTouchEnd" bindtouchstart="onTouchStart">
+        <view class="content {{arrow?'arrow':''}}" style="{{ctstyle}}width:{{width}}px;" hover-class="{{(hover && !showed)?'hover':''}}"
+            bind:tap="_onClicked">
+            <slot />
+        </view>
+        <view class="delete" catch:tap="_onDelete" hover-class="hover">删除</view>
+    </movable-view>
+</movable-area>

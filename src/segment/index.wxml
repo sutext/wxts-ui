@@ -1,0 +1,7 @@
+<view class="warp" id="warp">
+    <view class="item" style="{{value==index ? 'color:'+color : ''}}" wx:for="{{items}}" wx:key="" catchtap="_tapAtIndex"
+        data-idx="{{index}}">
+        <span style="{{loading ? 'background-color:#f6f6f6':''}}">{{loading ? '\t': item}}</span>
+    </view>
+    <view wx:if="{{!loading}}" class="tracker" style="background-color:{{color}};width:{{(width/items.length)-40}}px; left:{{value*(width/items.length) + 20}}px;" />
+</view>

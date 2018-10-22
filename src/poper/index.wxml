@@ -1,0 +1,6 @@
+<view class="wrapper" animation="{{wpani}}" wx:if="{{isShow}}" catch:touchmove="_ignore" catch:tap="dismiss">
+    <view class="content" style="{{ctstyle}}" catch:tap="_ignore">
+        <slot />
+    </view>
+    <image class="closer" src="closer.png" />
+</view>

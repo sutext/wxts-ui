@@ -1,0 +1,27 @@
+.wrapper{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 4px;
+  width: 650rpx;
+  overflow: hidden;
+}
+.closer{
+  width: 27px;
+  height: 27px;
+  margin-top: 30px;
+}

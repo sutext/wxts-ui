@@ -1,0 +1,12 @@
+{
+    "navigationBarTitleText": "测试",
+    "usingComponents": {
+        "btn": "wecp/button",
+        "search": "wecp/search",
+        "grader": "wecp/grader",
+        "segment": "wecp/segment",
+        "slidbar": "wecp/slidbar",
+        "poper-test": "./poper-test/index",
+        "popup-test": "./popup-test/index"
+    }
+}
