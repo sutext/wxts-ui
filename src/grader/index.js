@@ -2,10 +2,7 @@
 var env = require('../config')
 Component({
     properties: {
-        color: {
-            type: String,
-            value: 'theme'
-        },
+        type: String,
         size: {
             type: Number,
             value: 12
@@ -23,8 +20,8 @@ Component({
         scoreText: '0.0'
     },
     ready() {
-        var color = this.data.color
-        var icon = env.grader.themes[color]
+        var type = this.data.type || env.grader.type
+        var icon = env.grader.themes[type]
         if (!icon) {
             throw new Error('找不到相应的主题配置')
         }
