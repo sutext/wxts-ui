@@ -8,3 +8,13 @@
     height: 20px;
     margin-bottom: 8px;
 }
+.slidbar{
+    width: 100%;
+    height: 80px;
+}
+.List{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 100%;
+}
