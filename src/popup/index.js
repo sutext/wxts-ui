@@ -8,17 +8,17 @@ Component({
             type: String,
             value: '0px',
         },
-        ctoffset: {
-            type: String,
-            value: "0px"
-        },
         ctstyle: {//用于覆盖默认的content style 设置
             type: String,
             value: ''
         }
     },
     data: {
-        isShow: false
+        isShow: false,
+        ctoffset: "0px"
+    },
+    ready() {
+        this.setData({ ctoffset: "-" + this.data.ctheight })
     },
     methods: {
         _ignore() { },
@@ -39,7 +39,7 @@ Component({
             setTimeout(() => {
                 let ctani = this.ctani[this.data.position](0).step().export()
                 let wpani = this.wpani.opacity(1).step().export()
-                this.setData({ wpani, ctani, ctoffset: 0 })
+                this.setData({ wpani, ctani, ctoffset: "0px" })
                 if (typeof finish === 'function') {
                     finish()
                 }
