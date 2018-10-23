@@ -4,6 +4,10 @@ Component({
         ctstyle: {
             type: String,
             value: ''
+        },
+        closer: {
+            type: Boolean,
+            value: true
         }
     },
     data: {
