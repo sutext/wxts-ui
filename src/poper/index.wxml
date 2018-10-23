@@ -2,5 +2,5 @@
     <view class="content" style="{{ctstyle}}" catch:tap="_ignore">
         <slot />
     </view>
-    <image wx:if="{{closer}" class="closer" src="closer.png" />
+    <image wx:if="{{closer}}" class="closer" src="closer.png" />
 </view>
