@@ -6,7 +6,9 @@ Component({
             value: "line",// line fill image row column
             observer: '_themeChanged'
         },
-        color: String,
+        lineColor: String,
+        fillColor: String,
+        textColor: String,
         report: Boolean,
         openType: String, //the wx button open-type
         src: String, //image src
@@ -21,14 +23,14 @@ Component({
             this._updateStyle()
         },
         _updateStyle() {
-            var style = ''
+            var textColor = this.data.textColor || env.button.textColor || env.theme
+            var style = `color:${textColor};`
             if (this.data.theme === 'fill') {
-                var fillColor = this.data.color || env.button.fillColor || env.theme
-                style = `background-color:${fillColor};`
+                var fillColor = this.data.fillColor || env.button.fillColor || env.theme
+                style = `${style}background-color:${fillColor};`
             } else if (this.data.theme === 'line') {
-                var lineColor = this.data.color || env.button.lineColor || "#dbdbdb"
-                var color = this.data.color || env.button.textColor || '#343434'
-                style = `color:${color};border: 1px solid ${lineColor};`
+                var lineColor = this.data.lineColor || env.button.lineColor || "#dbdbdb"
+                style = `${style};border: 1px solid ${lineColor};`
             }
             this.setData({ style })
         },
