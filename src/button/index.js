@@ -1,35 +1,41 @@
 var env = require('../config')
 Component({
     properties: {
-        theme: {
-            type: String,
-            value: "line",// line fill image row column
-            observer: '_themeChanged'
-        },
-        lineColor: String,
-        fillColor: String,
-        textColor: String,
-        report: Boolean,
-        openType: String, //the wx button open-type
         src: String, //image src
         text: String, // button title
+        report: Boolean,
+        openType: String, //the wx button open-type
+        theme: {
+            type: String,
+            value: env.button.theme,// line fill image row column
+            observer: '_updateStyle'
+        },
+        color: {//ButtonColor对象
+            type: Object,
+            observer: '_updateStyle'
+        },
+        disColor: {//ButtonColor对象
+            type: Object,
+            observer: '_updateStyle'
+        },
     },
     ready() {
-        this._updateStyle()
+        if (this.data.theme === 'line') {
+            this._updateStyle()
+        }
     },
     methods: {
         _ignore() { },
-        _themeChanged(newval) {
-            this._updateStyle()
-        },
         _updateStyle() {
-            var textColor = this.data.textColor || env.button.textColor || env.theme
+            console.log('update');
+            var color = this.data.disColor || this.data.color || env.button.color
+            var textColor = color.text || "#666"
             var style = `color:${textColor};`
             if (this.data.theme === 'fill') {
-                var fillColor = this.data.fillColor || env.button.fillColor || env.theme
+                var fillColor = color.fill || env.theme
                 style = `${style}background-color:${fillColor};`
             } else if (this.data.theme === 'line') {
-                var lineColor = this.data.lineColor || env.button.lineColor || "#dbdbdb"
+                var lineColor = color.line || "#dbdbdb"
                 style = `${style};border: 1px solid ${lineColor};`
             }
             this.setData({ style })
@@ -45,7 +51,7 @@ Component({
             var detail = {}
             var formId = e.detail.formId
             detail.formId = formId
-            if (env.button.reporter || formId) {
+            if (env.button.reporter && formId) {
                 env.button.reporter(formId)
             }
             this.triggerEvent('click', detail)
