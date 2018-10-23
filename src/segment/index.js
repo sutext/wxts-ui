@@ -1,5 +1,5 @@
 
-var env = require('../index')
+var env = require('../config')
 Component({
     properties: {
         items: Array,

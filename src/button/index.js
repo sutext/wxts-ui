@@ -1,4 +1,4 @@
-var env = require('../index')
+var env = require('../config')
 Component({
     properties: {
         theme: {
