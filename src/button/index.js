@@ -20,14 +20,13 @@ Component({
         },
     },
     ready() {
-        if (this.data.theme === 'line') {
+        if (this.data.theme === env.button.theme) {
             this._updateStyle()
         }
     },
     methods: {
         _ignore() { },
         _updateStyle() {
-            console.log('update');
             var color = this.data.disColor || this.data.color || env.button.color
             var textColor = color.text || "#666"
             var style = `color:${textColor};`

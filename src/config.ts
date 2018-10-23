@@ -11,6 +11,7 @@ interface ButtonColor {
     fill?: string
     text?: string
 }
+type ButtonTheme = 'fill' | 'line' | 'image' | 'row' | 'column'
 /**
  * 全局button 样式设置，如果具体的button 设置了相应的变量，将以具体设置优先
  * @color 默认颜色设置
@@ -19,7 +20,7 @@ interface ButtonColor {
  */
 interface Button {
     readonly color: ButtonColor
-    theme: string
+    theme: ButtonTheme
     reporter?: Reporter
 }
 /**
