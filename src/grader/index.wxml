@@ -1,7 +1,7 @@
 <view class="content">
     <image class="star" style="margin-right: {{size/4}}px;width:{{size}}px;height:{{size}}px;" wx:for="{{stars}}"
         wx:key="" src="{{score>=(index+1) ? item.on : item.off}}" data-idx="{{index}}" catch:tap="{{disabled ? '' : '_tapAtIndex'}}" />
-    <view wx:if="{{digit}}" style="font-size: {{size}}px;margin-top: 2px;color:{{color}}px;">
+    <view wx:if="{{digit}}" style="font-size: {{size}}px;margin-top: 2px;color:{{color}};">
         {{scoreText}}
     </view>
 </view>
