@@ -55,5 +55,5 @@ class Config {
     public readonly button: Button = { color: {}, theme: 'line' }
     public readonly grader: Grader = { themes: {}, type: 'theme' }
 }
-const env = new Config
-export = env
+const conf = new Config
+export = conf
