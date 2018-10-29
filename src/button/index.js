@@ -37,7 +37,7 @@ Component({
                 var lineColor = color.line || "#dbdbdb"
                 style = `${style};border: 1px solid ${lineColor};`
             }
-            this.setData({ style })
+            this.setData({ style, textColor })
         },
         _onUserInfo(e) {
             var iv = e.detail.iv

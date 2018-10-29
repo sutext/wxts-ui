@@ -1,6 +1,6 @@
 {
   "name": "wecp",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "A group of wechat miniprogram Component. Very usfull ! ",
   "main": "dist/index.js",
   "miniprogram": "miniprogram_dist",
