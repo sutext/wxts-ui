@@ -27,7 +27,7 @@ Component({
     },
     methods: {
         _showedChange(newval) {
-            const x = newval ? -80 : 0
+            var x = newval ? -80 : 0
             this.setData({ x })
             if (showedCell && showedCell !== this) {
                 showedCell.setData({ showed: false })
@@ -38,7 +38,7 @@ Component({
             this._startX = e.changedTouches[0].pageX;
         },
         onTouchEnd: function onTouchEnd(e) {
-            const offset = e.changedTouches[0].pageX - this._startX
+            var offset = e.changedTouches[0].pageX - this._startX
             if (Math.abs(offset) > 40) {
                 this.setData({ showed: !this.data.showed })
             } else {

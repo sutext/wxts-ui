@@ -1,16 +1,17 @@
+var env = require('../config')
 Component({
     properties: {
         position: {
             type: String,
-            value: "bottom"//top bottom
+            value: env.popup.position//top bottom
         },
         ctheight: {
             type: String,
-            value: '0px',
+            value: env.popup.ctheight,
         },
         ctstyle: {//用于覆盖默认的content style 设置
             type: String,
-            value: ''
+            value: env.popup.ctstyle
         }
     },
     data: {

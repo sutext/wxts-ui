@@ -5,7 +5,7 @@ Component({
         type: String,
         size: {
             type: Number,
-            value: 12
+            value: env.grader.size
         },
         score: {
             type: Number,

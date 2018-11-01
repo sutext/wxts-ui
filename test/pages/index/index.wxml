@@ -1,6 +1,6 @@
 <scroll-view class="List" scroll-y>
-    <btn disColor="{{({fill:'#303030',text:'#999'})}}" style="width:200px; height:30px;margin-top:8px;" theme='fill'
-        text="填充是" bind:click="poperTest" />
+    <btn color="{{({fill:'#303030',text:'#999'})}}" style="width:200px; height:30px;margin-top:8px;" theme='fill' text="填充是"
+        bind:click="poperTest" />
     <btn style="width:200px; height:30px;margin-top:8px;" text="line" bind:click="popupTest" />
     <btn style="width:30px; height:30px;margin-top:8px;" theme='image' src="/pages/index/icon_star_on.png" />
     <btn class="row" theme='row' src="/pages/index/icon_star_on.png" text="row" />

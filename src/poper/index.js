@@ -1,13 +1,14 @@
 
+var env = require('../config')
 Component({
     properties: {
         ctstyle: {
             type: String,
-            value: ''
+            value: env.poper.ctstyle
         },
         closer: {
             type: Boolean,
-            value: true
+            value: env.poper.closer
         }
     },
     data: {

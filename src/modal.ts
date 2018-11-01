@@ -4,6 +4,9 @@ const modal: any = Behavior({
         this.modal = this.selectComponent('#modal')
     },
     methods: {
+        isShow() {
+            return this.modal.data.isShow
+        },
         toggle() {
             this.modal.toggle()
         },
