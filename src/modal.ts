@@ -19,6 +19,7 @@ const modal: any = Behavior({
     }
 })
 /**
- * 模态弹窗需从继承此 Behavior，主要用于poper 和popup 的二次封装
+ * @description 模态弹窗需从继承此 Behavior，主要用于poper 和popup 的二次封装
+ * @description 模态弹窗的z-index设置为100
  */
 export = modal

@@ -12,6 +12,10 @@ Component({
         ctstyle: {//用于覆盖默认的content style 设置
             type: String,
             value: env.popup.ctstyle
+        },
+        zindex: {
+            type: Number,
+            value: env.popup.zindex
         }
     },
     data: {

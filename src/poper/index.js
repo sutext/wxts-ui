@@ -9,6 +9,10 @@ Component({
         closer: {
             type: Boolean,
             value: env.poper.closer
+        },
+        zindex: {
+            type: Number,
+            value: env.poper.zindex
         }
     },
     data: {

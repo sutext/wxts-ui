@@ -49,10 +49,12 @@ interface GraderConfig {
  * @description 气泡弹窗的全局设置
  * @param ctstyle content style defualt is ''
  * @param closer show closer or not default is true
+ * @param zindex the modal zindex default is 100
  */
 interface PoperConfig {
     ctstyle: string
     closer: boolean
+    zindex: number
 }
 
 /**
@@ -60,11 +62,13 @@ interface PoperConfig {
  * @param ctstyle content style defualt is ''
  * @param position the modal presen position default is 'bottom'
  * @param ctheight the content height. default is '0px'
+ * @param zindex the modal zindex defualt is 100
  */
 interface PopupConfig {
     ctstyle: string
     position: 'bottom' | 'top'
     ctheight: string
+    zindex: number
 }
 /**
  * @description 全局控件配置
@@ -78,8 +82,8 @@ class Config {
     public theme: string = "#ffca50"
     public readonly button: ButtonConfig = { color: {}, theme: 'line' }
     public readonly grader: GraderConfig = { themes: {}, type: 'theme', size: 12 }
-    public readonly poper: PoperConfig = { ctstyle: '', closer: true }
-    public readonly popup: PopupConfig = { ctstyle: '', ctheight: '0px', position: 'bottom' }
+    public readonly poper: PoperConfig = { ctstyle: '', closer: true, zindex: 100 }
+    public readonly popup: PopupConfig = { ctstyle: '', ctheight: '0px', position: 'bottom', zindex: 100 }
 }
 const conf = new Config
 export = conf
