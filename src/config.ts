@@ -2,9 +2,9 @@ interface ButtonReporter {
     (formId: string): void
 }
 /**
- * @param line theme 为line 是的border color 和 text color 默认为 全局theme color
- * @param fill theme 为fill 时的填充色 默认为 全局theme color
- * @param text 标题字体色 默认为 全局theme color
+ * @param line 线框颜色 theme=line时生效 默认为全局theme color
+ * @param fill 填充色 theme=fill时生效 默认为全局theme color
+ * @param text 标题字体色 默认为全局theme color
  */
 interface ButtonColor {
     line?: string

@@ -32,7 +32,7 @@ Component({
             var style = `color:${textColor};`
             if (this.data.theme === 'fill') {
                 var fillColor = color.fill || env.theme
-                style = `${style}background-color:${fillColor};`
+                style = `${style}background:${fillColor};`
             } else if (this.data.theme === 'line') {
                 var lineColor = color.line || "#dbdbdb"
                 style = `${style};border: 1px solid ${lineColor};`
