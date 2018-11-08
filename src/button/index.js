@@ -5,6 +5,7 @@ Component({
         text: String, // button title
         report: Boolean,
         openType: String, //the wx button open-type
+        ctstyle: String,//addition content style, usualy you need't set it. it's priority bellow color.
         theme: {
             type: String,
             value: env.button.theme,// line fill image row column

@@ -3,7 +3,7 @@ interface ButtonReporter {
 }
 /**
  * @param line 线框颜色 theme=line时生效 默认为全局theme color
- * @param fill 填充色 theme=fill时生效 默认为全局theme color
+ * @param fill 填background theme=fill时生效 默认为全局theme color
  * @param text 标题字体色 默认为全局theme color
  */
 interface ButtonColor {

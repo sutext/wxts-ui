@@ -1,6 +1,7 @@
 <form class="wrapper" style="color:{{textColor}};" catch:tap="_ignore" bind:submit="_onClick" report-submit="{{report}}">
-    <button class="common {{theme}}" style="{{style}}" disabled="{{!!disColor}}" open-type="{{openType}}" form-type="{{openType? '': 'submit'}}"
-        bindgetuserinfo="_onUserInfo" hover-start-time="0" hover-stay-time="250" hover-stop-propagation hover-class="hover">
+    <button class="common {{theme}}" style="{{ctstyle}}{{style}}" disabled="{{!!disColor}}" open-type="{{openType}}"
+        form-type="{{openType? '': 'submit'}}" bindgetuserinfo="_onUserInfo" hover-start-time="0" hover-stay-time="250"
+        hover-stop-propagation hover-class="hover">
         <image wx:if="{{theme=='image'}}" src="{{src}}" style="width:100%;height:100%" />
         <block wx:elif="{{theme=='row' || theme=='column'}}">
             <image src="{{src}}" />
