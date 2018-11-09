@@ -1,7 +1,7 @@
-<view class="wrapper" style="z-index: {{zindex}};" animation="{{wpani}}" wx:if="{{isShow}}" catch:touchmove="_ignore"
-    catch:tap="dismiss">
+<view class="wrapper" style="z-index: {{zindex}};" wx:if="{{isShow}}" catch:touchmove="_ignore" catch:tap="dismiss">
+    <view class='blur' style='opacity:{{opacity}};' />
     <view class="content" style="{{ctstyle}}position: absolute;height:{{ctheight}};{{position}}:{{ctoffset}};"
-        animation="{{ctani}}" catch:tap="_ignore">
+        catch:tap="_ignore">
         <slot />
     </view>
 </view>

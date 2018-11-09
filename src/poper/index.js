@@ -28,18 +28,23 @@ Component({
             }
         },
         present() {
-            this.setData({ isShow: true })
-            this.wpani = this.wpani || wx.createAnimation({ duration: 350 })
-            let wpani = this.wpani.opacity(1).step().export()
-            setTimeout(() => {
-                this.setData({ wpani })
+            if (this.data.isShow) {
+                return
+            }
+            this.setData({ isShow: true, opacity: 0 })
+            var _this = this
+            setTimeout(function () {
+                _this.setData({ opacity: 1 })
             }, 100);
         },
         dismiss() {
-            let wpani = this.wpani.opacity(0).step().export()
-            this.setData({ wpani })
-            setTimeout(() => {
-                this.setData({ isShow: false })
+            if (!this.data.isShow) {
+                return
+            }
+            this.setData({ opacity: 0 })
+            var _this = this
+            setTimeout(function () {
+                _this.setData({ isShow: false })
             }, 350);
         },
     }

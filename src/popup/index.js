@@ -38,25 +38,21 @@ Component({
             if (this.data.isShow) {
                 return
             }
-            this.wpani = this.wpani || wx.createAnimation({ duration: 250 })
-            this.ctani = this.ctani || wx.createAnimation({ duration: 250, timingFunction: "ease" })
-            this.setData({ isShow: true, ctoffset: "-" + this.data.ctheight })
-            setTimeout(() => {
-                let ctani = this.ctani[this.data.position](0).step().export()
-                let wpani = this.wpani.opacity(1).step().export()
-                this.setData({ wpani, ctani, ctoffset: "0px" })
+            this.setData({ isShow: true, opacity: 0, ctoffset: "-" + this.data.ctheight })
+            var _this = this
+            setTimeout(function () {
+                _this.setData({ ctoffset: "0px", opacity: 1 })
                 if (typeof finish === 'function') {
                     finish()
                 }
-            }, 200);
+            }, 100);
         },
         dismiss(finish) {
             if (this.data.isShow) {
-                let ctani = this.ctani[this.data.position]("-" + this.data.ctheight).step().export()
-                let wpani = this.wpani.opacity(0).step().export()
-                this.setData({ ctani, wpani })
-                setTimeout(() => {
-                    this.setData({ isShow: false, ctoffset: "-" + this.data.ctheight })
+                this.setData({ opacity: 0, ctoffset: "-" + this.data.ctheight })
+                var _this = this
+                setTimeout(function () {
+                    _this.setData({ isShow: false })
                     if (typeof finish === 'function') {
                         finish()
                     }

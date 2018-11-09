@@ -1,18 +1,26 @@
 .wrapper{
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 100;
-  opacity: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+.blur{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: 0.2s;
 }
 .content{
-  position: absolute;
-  width: 100%;
-  left: 0;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
 }
+  

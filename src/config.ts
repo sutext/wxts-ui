@@ -47,9 +47,9 @@ interface GraderConfig {
 }
 /**
  * @description 气泡弹窗的全局设置
- * @param ctstyle content style defualt is ''
- * @param closer show closer or not default is true
- * @param zindex the modal zindex default is 100
+ * @param ctstyle content style @default  ''
+ * @param closer show closer or not @default  true
+ * @param zindex the modal zindex @default  100
  */
 interface PoperConfig {
     ctstyle: string
@@ -60,9 +60,9 @@ interface PoperConfig {
 /**
  * @description 模态弹窗的全局设置
  * @param ctstyle content style defualt is ''
- * @param position the modal presen position default is 'bottom'
- * @param ctheight the content height. default is '0px'
- * @param zindex the modal zindex defualt is 100
+ * @param position the modal presen position @default  'bottom'
+ * @param ctheight the content height. @default  '0px'
+ * @param zindex the modal zindex @default  100
  */
 interface PopupConfig {
     ctstyle: string
