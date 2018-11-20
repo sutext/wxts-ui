@@ -20,7 +20,7 @@
     border-radius: 4px;
     width: 650rpx;
     overflow: hidden;
-  }
+}
 .closer{
     width: 27px;
     height: 27px;

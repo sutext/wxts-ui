@@ -1,25 +1,25 @@
 .wrapper{
-  width: 100%;
-  height: 100%;
+    width: 100%;
+     height: 100%;
 }
 .common{
-  all: unset;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    all: unset;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .common::after{
-  all: unset;
+     all: unset;
 }
 .line{
-  box-sizing: border-box;
-  background-color: white;
+     box-sizing: border-box;
+     background-color: white;
 }
 .column{
-  flex-direction: column;
+     flex-direction: column;
 }
 .hover{
-  filter: brightness(80%);
+    filter: brightness(80%);
 }
