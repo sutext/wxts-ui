@@ -4,7 +4,8 @@ Component({
     properties: {
         value: {
             type: String,
-            value: ""
+            value: "",
+            observer: '_valueChange'
         },
         placeholder: {
             type: String,
@@ -29,7 +30,10 @@ Component({
             this.timer = setTimeout(function () {
                 _this.triggerEvent('typing', { value })
                 _this.timer = null
-            }, 1000);
+            }, env.search.interval);
+        },
+        _valueChange(newval) {
+            this.setData({ showClear: newval.length > 0 })
         },
         _clearInput(e) {
             this.setData({ value: "", showClear: false })

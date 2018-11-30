@@ -5,7 +5,7 @@
     <btn style="width:30px; height:30px;margin-top:8px;" theme='image' src="/pages/index/icon_star_on.png" />
     <btn class="row" theme='row' src="/pages/index/icon_star_on.png" text="row" />
     <btn class="column" theme='column' src="/pages/index/icon_star_on.png" text="column" />
-    <search style="width:100%;" cancel />
+    <search value="{{keywords}}" style="width:100%;" bind:typing="onTyping" focus />
     <grader disabled size="16" digit />
     <segment style="width:100%;height: 48px;display: block;" items="{{['吃饭','睡觉','打豆豆']}}" />
     <slidbar class="slidbar">

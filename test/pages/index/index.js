@@ -9,9 +9,13 @@ Page({
         this.popuptest = this.selectComponent('#popup-test')
     },
     poperTest() {
-        this.popertest.toggle()
+        // this.popertest.toggle()
+        this.setData({ keywords: 'test' })
     },
     popupTest() {
         this.popuptest.toggle()
+    },
+    onTyping(e) {
+        console.log(e.detail.value);
     }
 })

@@ -71,6 +71,14 @@ interface PopupConfig {
     zindex: number
 }
 /**
+ * @description 搜索框全局配置
+ * @param interval 键入自动触发搜索的频率 @default 1000
+ * @param focus 是否自动聚焦 @default false
+ */
+interface SearchConfig {
+    interval: number
+}
+/**
  * @description 全局控件配置
  * @param theme 全局主题色 exp '#ffca50'
  * @param button 全局button 设置
@@ -84,6 +92,7 @@ class Config {
     public readonly grader: GraderConfig = { themes: {}, type: 'theme', size: 12 }
     public readonly poper: PoperConfig = { ctstyle: '', closer: true, zindex: 100 }
     public readonly popup: PopupConfig = { ctstyle: '', ctheight: '0px', position: 'bottom', zindex: 100 }
+    public readonly search: SearchConfig = { interval: 1000 }
 }
 const conf = new Config
 export = conf
