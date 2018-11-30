@@ -32,7 +32,7 @@ Component({
             }, 1000);
         },
         _clearInput(e) {
-            this.setData({ text: "", showClear: false })
+            this.setData({ value: "", showClear: false })
             this.triggerEvent("clear")
         },
         _onCancel() {
