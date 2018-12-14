@@ -12,3 +12,6 @@ page{
 btn{
   display: block;
 }
+slidbar{
+    display: block;
+}

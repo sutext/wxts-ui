@@ -7,12 +7,10 @@ Component({
         ctstyle: {
             type: String,
             value: ''
-        },
-        showed: {
-            type: Boolean,
-            value: false,
-            observer: "_showedChange"
         }
+    },
+    data: {
+        showed: false
     },
     ready() {
         var _this = this
@@ -26,21 +24,30 @@ Component({
         }
     },
     methods: {
-        _showedChange(newval) {
-            var x = newval ? -80 : 0
-            this.setData({ x })
-            if (showedCell && showedCell !== this) {
-                showedCell.setData({ showed: false })
+        _setShowed(showed) {
+            if (showed === this.data.showed) {
+                return
             }
-            showedCell = this
+            var x = showed ? -80 : 0
+            this.setData({ x: x, showed: showed })
+            if (showed) {
+                if (showedCell && showedCell !== this) {
+                    showedCell._setShowed(false)
+                }
+                showedCell = this
+            } else {
+                if (showedCell && showedCell === this) {
+                    showedCell = null
+                }
+            }
         },
-        onTouchStart: function onTouchStart(e) {
+        onTouchStart(e) {
             this._startX = e.changedTouches[0].pageX;
         },
-        onTouchEnd: function onTouchEnd(e) {
+        onTouchEnd(e) {
             var offset = e.changedTouches[0].pageX - this._startX
             if (Math.abs(offset) > 40) {
-                this.setData({ showed: !this.data.showed })
+                this._setShowed(!this.data.showed)
             } else {
                 this.setData({ x: (this.data.showed ? -80 : 0) })
             }
@@ -48,6 +55,7 @@ Component({
         _onDelete() {
             if (this.data.showed) {
                 this.triggerEvent('delete')
+                this._setShowed(false)
             }
         },
         _onClicked() {

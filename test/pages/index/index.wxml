@@ -11,6 +11,15 @@
     <slidbar class="slidbar">
         <view>test</view>
     </slidbar>
+    <slidbar class="slidbar" arrow>
+        <view>test</view>
+    </slidbar>
+    <slidbar class="slidbar">
+        <view>test</view>
+    </slidbar>
+    <slidbar class="slidbar" hover>
+        <view>test</view>
+    </slidbar>
 </scroll-view>
 <poper-test id="poper-test" />
 <popup-test id="popup-test" />
