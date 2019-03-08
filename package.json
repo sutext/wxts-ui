@@ -22,7 +22,9 @@
         "模态弹窗",
         "modal",
         "search",
-        "segment"
+        "segment",
+        "toolbar",
+        "navbar"
     ],
     "files": [
         "miniprogram_dist",
