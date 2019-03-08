@@ -7,4 +7,6 @@
 #search 搜索框
 #segment 分段选择器
 #slidbar 支持滑动删除的视图封装
+#navbar 自定义导航栏 可自定义返回事件 以及返回按钮图片
+#toolbar 底部工具栏 需要自行实现内部UI
 #详细使用方法请运行test
