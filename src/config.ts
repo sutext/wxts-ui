@@ -14,6 +14,8 @@ interface ButtonColor {
 type ButtonTheme = 'fill' | 'line' | 'image' | 'row' | 'column'
 /**
  * @description 全局button 样式设置，如果具体的button 设置了相应的变量，将以具体设置优先
+ * @event login detail: { iv, rawData }
+ * @event click detail: { iv, rawData }
  * @param color 默认颜色设置
  * @param theme 默认主题
  * @param reporter 全局report回调
@@ -36,6 +38,7 @@ interface GraderThemes {
 }
 /**
  * @description 评星控件
+ * @event change detail: { value: score }
  * @param color 分数颜色
  * @param type 默认主题类型 theme
  */
@@ -59,7 +62,7 @@ interface PoperConfig {
 
 /**
  * @description 模态弹窗的全局设置
- * @param ctstyle content style defualt is ''
+ * @param ctstyle content style @defualt  ''
  * @param position the modal presen position @default  'bottom'
  * @param ctheight the content height. @default  '0px'
  * @param zindex the modal zindex @default  100
@@ -72,6 +75,9 @@ interface PopupConfig {
 }
 /**
  * @description 搜索框全局配置
+ * @event typing detail: { value }
+ * @event clear detail: {  }
+ * @event cancel detail: {  }
  * @param interval 键入自动触发搜索的频率 @default 1000
  * @param focus 是否自动聚焦 @default false
  */
@@ -79,7 +85,33 @@ interface SearchConfig {
     interval: number
 }
 /**
+ * @description 工具栏全局配置
+ * @param camber bottom camber height @default 0
+ * @param ctstyle content style @defualt  ''
+ */
+interface ToolbarConfig {
+    camber: number
+    ctstyle: string,
+}
+/**
+ * @description 导航栏全局配置
+ * @event back detail: {  }
+ * @param back retrun icon config @default null when null use build-in retrun arrow icon
+ * @param color text and defalut return bar color @default black
+ * @param title 导航标题
+ * @param ctstyle content style @defualt  ''
+ */
+interface NavbarConfig {
+    back?: { width: number, height: number, src: string }
+    title?: string
+    color: string
+    ctstyle: string,
+}
+/**
  * @description 全局控件配置
+ * @event delete detail: {  } for slidbar
+ * @event click detail: {  } for slidbar
+ * @event change detail: { value } segment
  * @param theme 全局主题色 exp '#ffca50'
  * @param button 全局button 设置
  * @param grader 全局评星器设置
@@ -93,6 +125,8 @@ class Config {
     public readonly poper: PoperConfig = { ctstyle: '', closer: true, zindex: 100 }
     public readonly popup: PopupConfig = { ctstyle: '', ctheight: '0px', position: 'bottom', zindex: 100 }
     public readonly search: SearchConfig = { interval: 1000 }
+    public readonly navbar: NavbarConfig = { color: 'black', ctstyle: '' }
+    public readonly toolbar: ToolbarConfig = { camber: 0, ctstyle: '' }
 }
 const conf = new Config
 export = conf

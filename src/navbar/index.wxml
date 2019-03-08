@@ -1,0 +1,10 @@
+<view class="navbar" style="{{ctstyle}}padding-top:{{camber}}px;">
+    <view class="side-box" hover-class="hover" hover-start-time="0" hover-stay-time="250" hover-stop-propagation
+        catch:tap="_onBack">
+        <image wx:if="{{back}}" hover-class="hover" style="width: {{back.width}}px;height: {{back.height}}px;"
+            src="{{back.src}}" />
+        <view wx:else class="left-arrow" style="border-left: 2px solid {{color}};border-bottom: 2px solid {{color}};" />
+    </view>
+    <view class="title" style="color: {{color}};">{{title}}</view>
+    <view class="side-box"></view>
+</view>

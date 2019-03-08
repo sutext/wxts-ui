@@ -1,0 +1,3 @@
+<view class="toolbar" style="{{ctstyle}}padding-bottom:{{camber}}px;">
+    <slot></slot>
+</view>
