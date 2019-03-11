@@ -12,11 +12,11 @@
     <view>test</view>
 </slidbar>
 <toolbar style="height:84px;flex:none;">
-    <btn color="{{({fill:'#303030',text:'#999'})}}" style="width:40px; height:30px;margin-top:8px;" theme='fill'
+    <btn color="{{({fill:'#303030',text:'#999'})}}" style="width:40px; height:30px;margin-top:8px;" theme='row'
         text="首页" bind:click="poperTest" />
-    <btn color="{{({fill:'#303030',text:'#999'})}}" style="width:40px; height:30px;margin-top:8px;" theme='fill'
-        text="订单" bind:click="poperTest" />
-    <btn color="{{({fill:'#303030',text:'#999'})}}" style="width:40px; height:30px;margin-top:8px;" theme='fill'
+    <btn color="{{({text:'#999'})}}" style="width:40px; height:30px;margin-top:8px;" theme='column' text="订单"
+        bind:click="poperTest" />
+    <btn color="{{({fill:'#303030',text:'#999'})}}" style="width:40px; height:30px;margin-top:8px;" theme='column'
         text="我的" bind:click="poperTest" />
 </toolbar>
 <poper-test id="poper-test" />

@@ -31,12 +31,18 @@ Component({
             var color = this.data.disColor || this.data.color || env.button.color
             var textColor = color.text || "#666"
             var style = `color:${textColor};`
-            if (this.data.theme === 'fill') {
-                var fillColor = color.fill || env.theme
-                style = `${style}background:${fillColor};`
-            } else if (this.data.theme === 'line') {
-                var lineColor = color.line || "#dbdbdb"
-                style = `${style};border: 1px solid ${lineColor};`
+            switch (this.data.theme) {
+                case 'fill':
+                    style = `${style}background-color:${color.fill || env.theme};`
+                    break;
+                case 'line':
+                    style = `${style};border: 1px solid ${color.line || "#dbdbdb"};`
+                    break;
+                default:
+                    if (color.fill) {
+                        style = `${style}background-color:${color.fill};`
+                    }
+                    break;
             }
             this.setData({ style, textColor })
         },
