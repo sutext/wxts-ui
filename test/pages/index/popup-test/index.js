@@ -1,4 +1,4 @@
-var modal = require('wecp/modal')
+var modal = require('wxts-ui/modal')
 Component({
     behaviors: [modal],
     methods: {

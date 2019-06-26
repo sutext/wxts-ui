@@ -1,6 +1,6 @@
 {
     "component": true,
     "usingComponents": {
-        "popup": "wecp/popup"
+        "popup": "wxts-ui/popup"
     }
 }

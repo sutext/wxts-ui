@@ -1,13 +1,13 @@
 {
     "navigationBarTitleText": "测试",
     "usingComponents": {
-        "btn": "wecp/button",
-        "navbar": "wecp/navbar",
-        "search": "wecp/search",
-        "grader": "wecp/grader",
-        "segment": "wecp/segment",
-        "slidbar": "wecp/slidbar",
-        "toolbar": "wecp/toolbar",
+        "btn": "wxts-ui/button",
+        "navbar": "wxts-ui/navbar",
+        "search": "wxts-ui/search",
+        "grader": "wxts-ui/grader",
+        "segment": "wxts-ui/segment",
+        "slidbar": "wxts-ui/slidbar",
+        "toolbar": "wxts-ui/toolbar",
         "poper-test": "./poper-test/index",
         "popup-test": "./popup-test/index"
     }

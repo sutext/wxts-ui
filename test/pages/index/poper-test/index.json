@@ -1,6 +1,6 @@
 {
     "component": true,
     "usingComponents": {
-        "poper": "wecp/poper"
+        "poper": "wxts-ui/poper"
     }
 }

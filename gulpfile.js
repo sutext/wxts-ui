@@ -25,6 +25,6 @@ gulp.task('copy', function () {
 gulp.task('test', function () {
     return gulp
         .src([`${minidist}/**/*`])
-        .pipe(gulp.dest('test/miniprogram_npm/wecp'))
+        .pipe(gulp.dest('test/miniprogram_npm/wxts-ui'))
 });
 gulp.task('default', gulp.series('clean', 'build', 'ignore', 'copy', 'test'));
