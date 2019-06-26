@@ -27,4 +27,4 @@ gulp.task('test', function () {
         .src([`${minidist}/**/*`])
         .pipe(gulp.dest('test/miniprogram_npm/wxts-ui'))
 });
-gulp.task('default', gulp.series('clean', 'build', 'ignore', 'copy', 'test'));
+gulp.task('default', gulp.series('clean', 'build', 'ignore', 'copy'));

@@ -1,5 +1,5 @@
 
-var env = require('../config')
+var env = require('../index').conf
 Component({
     properties: {
         ctstyle: {

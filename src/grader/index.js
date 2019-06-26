@@ -1,5 +1,5 @@
 
-var env = require('../config')
+var env = require('../index').conf
 Component({
     properties: {
         type: String,
@@ -20,8 +20,8 @@ Component({
         scoreText: '0.0'
     },
     ready() {
-        var type = this.data.type || env.grader.type
-        var icon = env.grader.themes[type]
+        var theme = this.data.theme || env.grader.theme
+        var icon = env.grader.themes[theme]
         if (!icon) {
             throw new Error('找不到相应的主题配置')
         }
